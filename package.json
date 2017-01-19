@@ -1,0 +1,15 @@
+{
+  "name": "game",
+  "version": "1.0.0",
+  "description": "guess artist",
+  "author": {
+    "name": "Michael Miretski",
+    "email": "4apaev@gmail.com"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "scripts": {
+    "build" : "browserify -d game.js -s Game -o bundle.js"
+  }
+}

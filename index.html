@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <title>Guess-The-Artist</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script>
+      this.$ = document.getElementById.bind(document);
+      this.log = console.log.bind(console);
+
+      document.addEventListener('DOMContentLoaded', e => {
+          window.game = new Game($('game'))
+        })
+    </script>
+    <script src="bundle.js"></script>
+  </head>
+  <body>
+    <div id="game">
+      <button name="start">start new game</button>
+    </div>
+
+  </body>
+</html>
