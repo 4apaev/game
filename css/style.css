@@ -1,0 +1,136 @@
+article,aside,footer,header,nav,section,main,html,body,div,a,ol,li,ul,dl,dd,dt,button,select,input,label,form,fieldset,h1,h2,h3,h4,h5,h6,p,pre { padding: 0; margin: 0 }
+article,aside,footer,header,nav,section,main { display: block; }
+ol,li,ul { list-style: none; }
+a, button { text-decoration: none; cursor: pointer; }
+button,input,select,textarea,fieldset { outline: none; border: none; font-size: 100% }
+button:focus,input:focus,select:focus,textarea:focus,fieldset:focus {outline: none;}
+pre:focus {outline: none;}
+code,kbd,pre,samp {  font: 1em/1.4 monospace, serif;}
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; padding: 0; }
+
+body {
+  color: #444;
+  font: 14px/24px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#game {
+  max-width: 75%;
+  margin: 1em auto;
+  border-radius: 3px;
+  padding: 1px;
+  min-height: 6em;
+  transition: all 1s;
+  box-shadow: 0 0 0 1px #ccc;
+  overflow: hidden;
+}
+
+h1 {
+  text-align: center;
+  line-height: 2;
+  margin: 0 0 1em 0
+}
+img {  padding: 1em }
+button {
+  transition: all .5s;
+  display: inline-block;
+  padding: 0 1em;
+  line-height: 2;
+  border-radius: 3px;
+  font-size: 1.5em;
+  background: #bada55;
+  color: olivedrab;
+  text-transform: capitalize;
+  cursor: pointer;
+  text-shadow: 0 1px rgba(255,255,255,.75);
+}
+button:hover{
+  background: yellowgreen
+}
+
+button[name=start] {
+  display: block;
+  width: 12em;
+  margin: 1em auto;
+  box-shadow: 0 3px;
+}
+button[name=skip] {
+  display: inline-block;
+  font-size: 1em;
+  margin: 0;
+  text-align: center;
+  line-height: 3;
+  border-radius: 0 0 3px;
+  flex: 1;
+  box-shadow: none;
+}
+input {
+  line-height: 3;
+  padding: 0 1em;
+  border-radius: 0 0 0 3px;
+  box-shadow: inset 0 0 2px rgba(0,0,0,.35);
+  flex: 6;
+}
+input:focus {
+  background: lightyellow;
+}
+label {
+  display: block;
+  line-height: 3;
+  padding: 0 1em;
+  border-bottom: 1px solid #ccc;
+  color: #777;
+  background: aliceblue;
+  font-size: 1.25em;
+  border-radius: 3px 3px 0 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fx {
+  display: flex
+}
+.spin {
+  position: relative;
+}
+
+.spin * {
+    opacity: 0;
+  }
+
+.spin:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -1em 0 0 -1em;
+  content: '';
+  display: block;
+  width: 2em;
+  height: 2em;
+
+  border-radius:50%;
+  border: .6em dotted #ccc;
+  -webkit-animation-name: spin;
+  -webkit-animation-duration: 4000ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+
+  animation-name: spin;
+  animation-duration: 4000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@-webkit-keyframes spin {
+  from { -webkit-transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(360deg);
+  }
+}

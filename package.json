@@ -10,6 +10,12 @@
     "type": "git"
   },
   "scripts": {
-    "build" : "browserify -d game.js -s Game -o bundle.js"
+    "build" : "browserify -d main.js -o dist/bundle.js",
+    "start" : "open index.html",
+    "es5"   : "babel --presets es2015 dist/bundle.js -o dist/bundle.es5.js"
+  },
+  "devDependencies": {
+    "browserify": "latest"
   }
+
 }
