@@ -11,9 +11,9 @@
     "url": "git@github.com:4apaev/game.git"
   },
   "scripts": {
-    "build" : "browserify -d main.js -o dist/bundle.js",
+    "build" : "browserify -d main.js -o bundle.js",
     "start" : "open index.html",
-    "es5"   : "babel --presets es2015 dist/bundle.js -o dist/bundle.es5.js"
+    "es5"   : "babel --presets es2015 bundle.js -o bundle.es5.js"
   },
   "devDependencies": {
     "browserify": "latest"

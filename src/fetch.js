@@ -22,7 +22,6 @@ function fetchAlbums(artist=sample(ARTISTS)) {
       })
       .then(({ results }) => ({
         artist,
-        albums: results
         albums: shuffle(results).slice(0, ATTEMPTS)
       }))
   }
